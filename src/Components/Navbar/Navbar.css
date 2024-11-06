@@ -1,0 +1,158 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+img{
+    border: none;
+    text-decoration: none;
+}
+:root {
+    --mainColor: rgb(71, 99, 255);
+    --mainColorLight: #5767aa;
+    --secondaryColor: #000000;
+    --textColor: #eee;
+}
+.tex {
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+.red-tex{
+    background-color: red;
+    padding: 0px .3em;
+    margin: 0px 10px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 2rem;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+}
+
+nav a {
+    margin: 0 2rem;
+    color: var(--textColor);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+ nav a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.nav-btn {
+    display: none;
+    width: 30px;
+    height: auto;
+}
+
+/* text design */
+.text {
+    color: black;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-top: 1.3em;
+    margin-bottom: 2rem;
+    font-size: 1.8em;
+}
+.red-text{
+    background-color: red;
+    padding: 0px .3em;
+    margin: 0px 10px;
+    border-radius: 5px;
+    color: white;
+}
+/* menuicon */
+.menuline{
+    height: 3px;
+    width: 25px;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 4px;
+}
+.menu{
+    cursor: pointer;
+}
+
+/* Skeleton */
+.sk-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 0px 20px;
+    gap: 20px;
+}
+
+.card-skeleton {
+    margin: 10px auto;
+    max-width: 320px;
+    padding: 0.5rem;
+    border: 1px solid rgb(75, 75, 75);
+    border-radius: 5px;
+}
+
+@media (max-width:1024px) {
+    .nav-btn {
+        display: block;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 10;
+        right: 0;
+        height: 100%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3.5rem;
+        background-color: var(--mainColor);
+        transition: .75s;
+        transform: translateX(100vh);
+    }
+
+    header .show-menu {
+        transform: none;
+    }
+
+    nav .nav-close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    nav a {
+        font-size: 1, 5rem;
+    }
+    .text {
+        margin-bottom: 1.4rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media(max-width:420px) {
+    .sk-box {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    }
+
+    .card-skeleton {
+        margin: 25px auto;
+    }
+    .text {
+        margin-bottom: 0.1rem;
+        font-size: 1.6rem;
+    }
+}
