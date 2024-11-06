@@ -1,7 +1,6 @@
 import './Navbar.css'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { useRef } from 'react'
-import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
@@ -14,14 +13,14 @@ const Navbar = () => {
     <>
 
   <header>
-  <Link href="/" className="tex">PULSE <span className="red-tex">24</span></Link>
+  <a href="/" className="tex">PULSE <span className="red-tex">24</span></a>
       <nav ref={navRef}>
-        <Link to='/'>home</Link>
-        <Link to='/sports'>sports</Link>
-        <Link to='/entertainment'>entertainment</Link>
-        <Link to='/health'>health</Link>
-        <Link to='/technology'>technology</Link>
-        <Link to='/contactus'>contact us</Link>
+        <a href='/'>home</a>
+        <a href='/sports'>sports</a>
+        <a href='/entertainment'>entertainment</a>
+        <a href='/health'>health</a>
+        <a href='/technology'>technology</a>
+        <a href='/contactus'>contact us</a>
         <div class="nav-btn nav-close" onClick={showNavbar}>
                 Close
             </div>

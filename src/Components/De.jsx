@@ -3,7 +3,6 @@ import Car from "./Categories copy/Car"
 import '../Components/Navbar/Navbar.css'
 import 'react-loading-skeleton/dist/skeleton.css'
 import CardSkeleton from "./CardSkeleton"
-import { Link } from "react-router-dom"
 
 const De = ({ val }) => {
   const [isLoading, setLoading] = useState(false)
@@ -35,7 +34,7 @@ const De = ({ val }) => {
         <input type="text" onChange={handleInput} />
         <button className="but" onClick={getData}>Search</button>
       </div> */}
-      <Link href="#" className="text">LATEST <span className="red-text">NEWS</span></Link>
+      <a href="#" className="text">LATEST <span className="red-text">NEWS</span></a>
       <CardSkeleton />
       <button className='load-more'>Load  More....</button>
     </div>)
@@ -46,9 +45,9 @@ const De = ({ val }) => {
           <input type="text" onChange={handleInput} />
           <button className="but" onClick={getData}>Search</button>
         </div> */}
-        <Link href="#" className="text">LATEST <span className="red-text">NEWS</span></Link>
+        <a href="#" className="text">LATEST <span className="red-text">NEWS</span></a>
         <Car detail={data} />
-        <button className='load-more'><Link to={val} className='view-more'>View More</Link></button>
+        <button className='load-more'><a to={val} className='view-more'>View More</a></button>
       </>
     )
 }
