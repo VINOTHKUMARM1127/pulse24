@@ -20,14 +20,16 @@
 }
 
 .news h5 {
+    margin: 2px auto;
     font-size: 1.1em;
-    padding: 10px 15px 0px 15px;
+    padding: 0px 15px 0px 15px;
     text-align: justify;
 }
 
 .news p {
+    margin: 2px auto;
     font-size: 0.9em;
-    padding: 10px 15px 20px 15px;
+    padding: 0px 15px 0px 15px;
 }
 
 img {
