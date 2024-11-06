@@ -3,6 +3,8 @@ import Card from "../Card/Card"
 import '../Navbar/Navbar.css'
 import 'react-loading-skeleton/dist/skeleton.css'
 import CardSkeleton from "../CardSkeleton"
+import { Link } from "react-router-dom"
+
 
 const Categories = ({val}) => {
     const [isLoading, setLoading] = useState(false)
@@ -26,7 +28,7 @@ const Categories = ({val}) => {
     if (isLoading)
         return (
             <>
-                <a href="#" className="text">{val.toUpperCase()} <span className="red-text">NEWS</span></a>
+                <Link to="/bbcnews" className="text">{val.toUpperCase()} <span className="red-text">NEWS</span></Link>
                 <CardSkeleton />
                 <button className='load-more'>View  More....</button>
             </>
@@ -35,7 +37,7 @@ const Categories = ({val}) => {
     else
         return (
             <>
-                <a href="#" className="text">{val.toUpperCase()} <span className="red-text">NEWS</span></a>
+                <Link to="/bbcnews" className="text">{val.toUpperCase()} <span className="red-text">NEWS</span></Link>
                 <Card detail={data} />
             </>
         )
