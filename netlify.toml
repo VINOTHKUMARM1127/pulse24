@@ -1,3 +1,7 @@
+[build]
+  publish = "dist"            # This is the directory Vite outputs the build to
+  command = "vite build"      # Or `npm run build` / `yarn build`
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
